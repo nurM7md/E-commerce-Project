@@ -32,6 +32,9 @@ const Order = ({ order }) => {
           <p className="text-lg text-slate-600">
             Zip Code: {order.shippingInformation.zip}
           </p>
+          <p className="text-lg text-slate-600">
+            Phone: {order.shippingInformation.phone}
+          </p>
         </div>
         <div>
           <h3 className="py-2 text-xl font-semibold text-slate-950">

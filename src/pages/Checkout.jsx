@@ -3,7 +3,7 @@ import { FaAngleDown } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-const Checkout = ({setOrder}) => {
+const Checkout = ({ setOrder }) => {
   const [billingToggle, setBillingToggle] = useState(true);
 
   const [shippingToggle, setShippingToggle] = useState(false);
@@ -11,44 +11,47 @@ const Checkout = ({setOrder}) => {
   const [paymentToggle, setPaymentToggle] = useState(false);
 
   const [paymentMethod, setPaymentMethod] = useState("cod");
-  const [shippingInfo , setShippingInfo] = useState({
-    name:' ',
-    address : ' ',
-    city : ' ',
-    zip : ' '
-  })
+  const [shippingInfo, setShippingInfo] = useState({
+    name: " ",
+    address: " ",
+    city: " ",
+    zip: " ",
+    phone: " ",
+  });
 
   const cart = useSelector((state) => state.cart);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
-  const { name, value } = e.target;
-  setShippingInfo(prevState => ({
-    ...prevState,
-    [name]: value
-  }));
-};
-
-const handleOrder = () => {
-  const newOrder = {
-    products: cart.products,
-    orderNumber: "1234",
-    shippingInformation: shippingInfo,
-    totalPrice: cart.totalPrice
+    const { name, value } = e.target;
+    setShippingInfo((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
-  
-  // تتأكد من أن shippingInfo غير فارغ قبل التحديث
-  if (shippingInfo.name && shippingInfo.address && shippingInfo.city && shippingInfo.zip) {
-    setOrder(newOrder);
-    navigate('/order-confirmation');
-  } else {
-    alert("Please fill in all the shipping information!");
-  }
-};
 
-  
+  const handleOrder = () => {
+    const newOrder = {
+      products: cart.products,
+      orderNumber: "1234",
+      shippingInformation: shippingInfo,
+      totalPrice: cart.totalPrice,
+    };
 
-  
+    // تتأكد من أن shippingInfo غير فارغ قبل التحديث
+    if (
+      shippingInfo.name &&
+      shippingInfo.address &&
+      shippingInfo.city &&
+      shippingInfo.zip &&
+      shippingInfo.phone
+    ) {
+      setOrder(newOrder);
+      navigate("/order-confirmation");
+    } else {
+      alert("Please fill in all the shipping information!");
+    }
+  };
 
   return (
     <div className="container px-4 py-8 mx-auto min-h-96 md:px-16 lg:px-24">
@@ -73,9 +76,10 @@ const handleOrder = () => {
                   name="name"
                   placeholder="Enter Name"
                   className="w-full px-3 py-2 border"
-                  onClick={(e) => setShippingInfo({...shippingInfo , name: e.target.value})}
-                    onChange={handleChange}
-                  
+                  onClick={(e) =>
+                    setShippingInfo({ ...shippingInfo, name: e.target.value })
+                  }
+                  onChange={handleChange}
                 />
               </div>
               <div>
@@ -99,7 +103,12 @@ const handleOrder = () => {
                     name="phone"
                     placeholder="Enter Phone"
                     className="w-full px-3 py-2 border"
-                    onClick={(e) => setShippingInfo({...shippingInfo , zip: e.target.value})}
+                    onClick={(e) =>
+                      setShippingInfo({
+                        ...shippingInfo,
+                        phone: e.target.value,
+                      })
+                    }
                     onChange={handleChange}
                   />
                 </div>
@@ -123,10 +132,15 @@ const handleOrder = () => {
                 <label className="block text-gray-700">Address</label>
                 <input
                   type="text"
-                  name="name"
+                  name="address"
                   placeholder="Enter Address"
                   className="w-full px-3 py-2 border"
-                  onClick={(e) => setShippingInfo({...shippingInfo , address: e.target.value})}
+                  onClick={(e) =>
+                    setShippingInfo({
+                      ...shippingInfo,
+                      address: e.target.value,
+                    })
+                  }
                   onChange={handleChange}
                 />
               </div>
@@ -140,7 +154,9 @@ const handleOrder = () => {
                     name="city"
                     placeholder="Enter City"
                     className="w-full px-3 py-2 border"
-                    onClick={(e) => setShippingInfo({...shippingInfo , city: e.target.value})}
+                    onClick={(e) =>
+                      setShippingInfo({ ...shippingInfo, city: e.target.value })
+                    }
                     onChange={handleChange}
                   />
                 </div>
@@ -153,7 +169,9 @@ const handleOrder = () => {
                     name="code"
                     placeholder="Enter Code"
                     className="w-full px-3 py-2 border"
-                    onClick={(e) => setShippingInfo({...shippingInfo , zip: e.target.value})}
+                    onClick={(e) =>
+                      setShippingInfo({ ...shippingInfo, zip: e.target.value })
+                    }
                     onChange={handleChange}
                   />
                 </div>
@@ -294,8 +312,10 @@ const handleOrder = () => {
             </div>
           </div>
 
-          <button className="w-full py-2 mt-6 text-white bg-red-600 hover:bg-red-800"
-          onClick={handleOrder}>
+          <button
+            className="w-full py-2 mt-6 text-white bg-red-600 hover:bg-red-800"
+            onClick={handleOrder}
+          >
             Place Order
           </button>
         </div>
