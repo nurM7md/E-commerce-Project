@@ -12,6 +12,7 @@ const Checkout = ({setOrder}) => {
 
   const [paymentMethod, setPaymentMethod] = useState("cod");
   const [shippingInfo , setShippingInfo] = useState({
+    name:' ',
     address : ' ',
     city : ' ',
     zip : ' '
@@ -20,17 +21,31 @@ const Checkout = ({setOrder}) => {
   const cart = useSelector((state) => state.cart);
   const navigate = useNavigate()
 
-  const handleOrder = ()=>{
-    const newOrder = {
-      products : cart.products,
-      orderNumber : "1234",
-      shippingInformation : shippingInfo,
-      totalPrice : cart.totalPrice
-    } 
-    setOrder (newOrder)
-    navigate('/order-confirmation')
-    
+  const handleChange = (e) => {
+  const { name, value } = e.target;
+  setShippingInfo(prevState => ({
+    ...prevState,
+    [name]: value
+  }));
+};
+
+const handleOrder = () => {
+  const newOrder = {
+    products: cart.products,
+    orderNumber: "1234",
+    shippingInformation: shippingInfo,
+    totalPrice: cart.totalPrice
+  };
+  
+  // تتأكد من أن shippingInfo غير فارغ قبل التحديث
+  if (shippingInfo.name && shippingInfo.address && shippingInfo.city && shippingInfo.zip) {
+    setOrder(newOrder);
+    navigate('/order-confirmation');
+  } else {
+    alert("Please fill in all the shipping information!");
   }
+};
+
   
 
   
@@ -58,6 +73,9 @@ const Checkout = ({setOrder}) => {
                   name="name"
                   placeholder="Enter Name"
                   className="w-full px-3 py-2 border"
+                  onClick={(e) => setShippingInfo({...shippingInfo , name: e.target.value})}
+                    onChange={handleChange}
+                  
                 />
               </div>
               <div>
@@ -81,6 +99,8 @@ const Checkout = ({setOrder}) => {
                     name="phone"
                     placeholder="Enter Phone"
                     className="w-full px-3 py-2 border"
+                    onClick={(e) => setShippingInfo({...shippingInfo , zip: e.target.value})}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -107,6 +127,7 @@ const Checkout = ({setOrder}) => {
                   placeholder="Enter Address"
                   className="w-full px-3 py-2 border"
                   onClick={(e) => setShippingInfo({...shippingInfo , address: e.target.value})}
+                  onChange={handleChange}
                 />
               </div>
               <div>
@@ -120,6 +141,7 @@ const Checkout = ({setOrder}) => {
                     placeholder="Enter City"
                     className="w-full px-3 py-2 border"
                     onClick={(e) => setShippingInfo({...shippingInfo , city: e.target.value})}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -132,6 +154,7 @@ const Checkout = ({setOrder}) => {
                     placeholder="Enter Code"
                     className="w-full px-3 py-2 border"
                     onClick={(e) => setShippingInfo({...shippingInfo , zip: e.target.value})}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
