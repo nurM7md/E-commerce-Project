@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/nurM7md.github.io/E-commerce-Project/static/css/main.487cdf07.css",
+    "main.js": "/nurM7md.github.io/E-commerce-Project/static/js/main.79fa1564.js",
+    "static/media/grayShort.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/grayShort.210706e84ceefe23a0da.jpg",
+    "static/media/whiteShort.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/whiteShort.3e7a16f48516170ccf43.jpg",
+    "static/media/man category.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/man category.216cf1b4c5c3f2c2b83e.jpg",
+    "static/media/women category.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/women category.c136c8238a96cc37ca5e.jpg",
+    "static/media/grayPants.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/grayPants.9d600ae52389b987186e.jpg",
+    "static/media/brownShirt.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/brownShirt.3387f6698f34c5917b41.jpg",
+    "static/media/burghandyShemise.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/burghandyShemise.bfa8790c51b7836c52b6.jpg",
+    "static/media/redDress.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/redDress.b0ff459ed63ff25ed58d.jpg",
+    "static/media/blackShirt.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/blackShirt.9fc6210ef72ab370b378.jpg",
+    "static/media/blueShemise.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/blueShemise.d9e02b1701e6fe6a53c2.jpg",
+    "static/media/burghandyBlouse.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/burghandyBlouse.907461f7f2814f20e577.jpg",
+    "static/media/cutSholderBlouse.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/cutSholderBlouse.d5f0bed9748a137134c6.jpg",
+    "static/media/homePage.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/homePage.8ab1f569387c559d9d57.jpg",
+    "static/media/buterflyBlose.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/buterflyBlose.84e93a6c61e4e16bf900.jpg",
+    "static/media/greenBlouse.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/greenBlouse.922ed55da25cf8c67557.jpg",
+    "static/media/GreenShirt.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/GreenShirt.4ec5599595ec07fcb8c2.jpg",
+    "static/media/blackBlouse.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/blackBlouse.b75c4af9dba90f8395de.jpg",
+    "static/media/blueBlouse.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/blueBlouse.36519c5f0a3c308bf3ae.jpg",
+    "static/media/empty.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/empty.93952a06882fa06fe46e.jpg",
+    "index.html": "/nurM7md.github.io/E-commerce-Project/index.html",
+    "main.487cdf07.css.map": "/nurM7md.github.io/E-commerce-Project/static/css/main.487cdf07.css.map",
+    "main.79fa1564.js.map": "/nurM7md.github.io/E-commerce-Project/static/js/main.79fa1564.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.487cdf07.css",
+    "static/js/main.79fa1564.js"
+  ]
+}
