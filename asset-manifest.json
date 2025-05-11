@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/nurM7md.github.io/E-commerce-Project/static/css/main.487cdf07.css",
-    "main.js": "/nurM7md.github.io/E-commerce-Project/static/js/main.79fa1564.js",
+    "main.js": "/nurM7md.github.io/E-commerce-Project/static/js/main.25625b74.js",
     "static/media/grayShort.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/grayShort.210706e84ceefe23a0da.jpg",
     "static/media/whiteShort.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/whiteShort.3e7a16f48516170ccf43.jpg",
     "static/media/man category.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/man category.216cf1b4c5c3f2c2b83e.jpg",
@@ -23,10 +23,10 @@
     "static/media/empty.jpg": "/nurM7md.github.io/E-commerce-Project/static/media/empty.93952a06882fa06fe46e.jpg",
     "index.html": "/nurM7md.github.io/E-commerce-Project/index.html",
     "main.487cdf07.css.map": "/nurM7md.github.io/E-commerce-Project/static/css/main.487cdf07.css.map",
-    "main.79fa1564.js.map": "/nurM7md.github.io/E-commerce-Project/static/js/main.79fa1564.js.map"
+    "main.25625b74.js.map": "/nurM7md.github.io/E-commerce-Project/static/js/main.25625b74.js.map"
   },
   "entrypoints": [
     "static/css/main.487cdf07.css",
-    "static/js/main.79fa1564.js"
+    "static/js/main.25625b74.js"
   ]
 }
